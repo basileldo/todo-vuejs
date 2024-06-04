@@ -50,6 +50,8 @@ This project is licensed under the [LICENSE](LICENSE).
 
 ## SETUP GUIDE
 
+## PWA CONVERTION STEPS
+
 **Step 1:** Set Up Your Vue.js Project
 Install Vue CLI: If you haven't already, install Vue CLI globally using npm or yarn.
 
@@ -96,3 +98,54 @@ npm run build
 Deploy Your PWA: Deploy your PWA to a hosting service like Netlify, Vercel, Firebase Hosting, or GitHub Pages.
 
 Verify: After deployment, verify that your app is accessible and installable as a PWA.
+
+
+
+
+## How to Connect application to a mongodb document database
+
+To connect your Vue.js ToDo application to a MongoDB database, you'll need to set up a backend server. Typically, you'd use Node.js with Express for this purpose. Below are the steps to create an Express server that connects to MongoDB, and how to integrate this server with your Vue.js frontend.
+
+**Step 1:** Set Up the Backend Server
+1.1 Initialize the Project
+First, create a new directory for your backend and initialize a Node.js project:
+
+**bash**
+
+mkdir backend
+cd backend
+npm init -y
+1.2 Install Required Dependencies
+Install Express, Mongoose, and other necessary packages:
+
+**bash**
+
+npm install express mongoose cors body-parser
+1.3 Create the Server
+Create a file named server.js in the backend directory and set up your Express server to connect to MongoDB
+
+Once MongoDB is installed, start the MongoDB server:
+
+**bash**
+
+mongod
+Step 3: Integrate Backend with Frontend
+3.1 Update Vue.js Application
+In your Vue.js frontend, you need to update the TodoList.vue component to fetch data from the backend and post new todos to it.
+
+
+**bash**
+
+Copy codenode server.js
+4.2 Start the Frontend Development Server
+Navigate to your Vue.js project directory and start the development server:
+
+**bash**
+
+npm run serve
+Now, your Vue.js ToDo app should be connected to the MongoDB database via the Express backend. You can add, remove, and fetch todos, and the changes will be reflected in your MongoDB database.
+
+**Summary**
+Backend Server: Set up using Node.js, Express, and Mongoose.
+Frontend Integration: Updated to use Axios for making HTTP requests to the backend.
+Database: MongoDB for storing ToDo items.
